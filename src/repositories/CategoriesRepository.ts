@@ -24,6 +24,14 @@ class CategoriesRepository{
     
         this.categories.push(category);
     }
+
+    list(): Category[]{
+        return this.categories;
+    }
+
+    findByName(name:string): Category{
+        return this.categories.find(category => category.name.toLowerCase() === name.toLowerCase());
+    }
 }
 
 export { CategoriesRepository }
