@@ -1,18 +1,22 @@
 {
-  "name": "RentalX",
+  "name": "Rentx",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Jimenez",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --poll --respawn src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
   "dependencies": {
     "csv-parse": "^5.0.4",
     "express": "^4.17.2",
     "multer": "^1.4.4",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.3.0",
     "tsc": "^2.0.4",
+    "typeorm": "^0.2.41",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
