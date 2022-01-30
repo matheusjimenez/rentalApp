@@ -7,11 +7,14 @@ class ImportCategoryController{
     handle(request: Request, response: Response): Response{
         const { file } = request;
        
+        console.log("file:");
+        console.log(file);
+        
         const importCategoryUseCase = container.resolve(ImportCategoryUseCase);
 
         importCategoryUseCase.execute(file);
 
-        return response.send();
+        return response.status(201).send();
     }
 }
 
