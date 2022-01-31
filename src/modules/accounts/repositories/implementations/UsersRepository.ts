@@ -23,6 +23,7 @@ class UserRepository implements IUsersRepository{
 
         await this.repository.save(user);
     }
+    
 }
 
 export { UserRepository }

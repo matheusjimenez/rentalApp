@@ -1,15 +1,14 @@
 import { inject, injectable } from "tsyringe";
 import { hash } from 'bcryptjs';
 
-import { UserRepository } from "../../repositories/implementations/UsersRepository";
-import { ICreateUsersDTO } from "../../repositories/IUsersRepository";
+import { ICreateUsersDTO, IUsersRepository } from "../../repositories/IUsersRepository";
 
 @injectable()
 class CreateUserUsecase{
 
     constructor(
         @inject("UsersRepository")
-        private userRepository: UserRepository
+        private userRepository: IUsersRepository
         ) {}
 
     async execute({name, password, email, driver_license}: ICreateUsersDTO): Promise<void>{
