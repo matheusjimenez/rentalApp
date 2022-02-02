@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add express-async-errors
+  C:\Program Files\nodejs\node.exe C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add typeorm migration:create -n AlterUserAddAvatar
 
 PATH: 
   C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\mathe\AppData\Local\Microsoft\WindowsApps;C:\Users\mathe\AppData\Roaming\npm;C:\Users\mathe\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\mathe\AppData\Local\Microsoft\WindowsApps;C:\Users\mathe\AppData\Roaming\npm;C:\Users\mathe\AppData\Local\Programs\Microsoft VS Code\bin
@@ -14,7 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\dev\rentx\node_modules\.bin\ts-node-dev'
+  Error: migration:create: Invalid protocol: migration:
+      at Request.module.exports.Request.init (C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141152:31)
+      at new Request (C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140825:8)
+      at request (C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137731:10)
+      at RequestManager.execute (C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67081:15)
+      at RequestManager.shiftQueue (C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67119:10)
+      at C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66788:13
+      at new Promise (<anonymous>)
+      at new F (C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:5301:28)
+      at RequestManager.request (C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66786:19)
+      at NpmRegistry.<anonymous> (C:\Users\mathe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:31747:42)
 
 npm manifest: 
   {
@@ -31,6 +41,7 @@ npm manifest:
       "bcryptjs": "^2.4.3",
       "csv-parse": "^5.0.4",
       "express": "^4.17.2",
+      "express-async-errors": "^3.1.1",
       "jsonwebtoken": "^8.5.1",
       "multer": "^1.4.4",
       "pg": "^8.7.1",
@@ -1000,6 +1011,11 @@ Lockfile:
     version "1.8.1"
     resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
     integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+  
+  express-async-errors@^3.1.1:
+    version "3.1.1"
+    resolved "https://registry.yarnpkg.com/express-async-errors/-/express-async-errors-3.1.1.tgz#6053236d61d21ddef4892d6bd1d736889fc9da41"
+    integrity sha512-h6aK1da4tpqWSbyCa3FxB/V6Ehd4EEB15zyQq9qe75OZBp0krinNKuH4rAY+S/U/2I36vdLAUFSjQJ+TFmODng==
   
   express@^4.17.2:
     version "4.17.2"
